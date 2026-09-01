@@ -9,6 +9,10 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:5000',
         changeOrigin: true,
+        build: {
+    chunkSizeWarningLimit: 1600, // Raises warning threshold from 500kB to 1600kB
+  },
+        
       },
     },
   },
